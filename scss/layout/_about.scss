@@ -1,15 +1,15 @@
 .about{
     padding-top: 85px;
     height: 645px;
-    background: url("/img/about/about_bg-desktop.jpg") no-repeat center/cover;
+    background: url("../img/about/about_bg-desktop.jpg") no-repeat center/cover;
     @include tablet{
-        background-image: url("/img/about/about_bg-tablet.jpg");
+        background-image: url("../img/about/about_bg-tablet.jpg");
         padding-top: 60px;
         height: 950px;
     }
     @include mobile{
         height: 1000px;
-        background-image: url("/img/about/about_bg-mobile.jpg")
+        background-image: url("../img/about/about_bg-mobile.jpg")
     }
     &__title{
         @extend %title;

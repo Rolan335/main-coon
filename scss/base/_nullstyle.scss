@@ -5,9 +5,10 @@
 }
 
 a{
+    color: #fff;
     text-decoration: none;
     &:visited{
-        color: inherit;
+        color: inherit !important;
     }
 }
 
