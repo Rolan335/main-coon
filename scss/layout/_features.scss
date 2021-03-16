@@ -1,0 +1,157 @@
+.features{
+    background-color: $black-light;
+    padding-top: 80px;
+    height: 1000px;
+    @include tablet{
+        height: 760px;
+    }
+    @include mobile{
+        padding-top: 60px;
+        height: 840px;
+    }
+    .container{
+        overflow: visible;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__subtitle{
+        @extend %subtitle;
+        width: 750px;
+        margin: $mr-center;
+        margin-top: 23px;
+        @include tablet{
+            width: 445px;
+        }
+    }
+    &__pic-wrapper{
+        width: 630px;
+        height: 590px;
+        border-radius: 50%;
+        margin: $mr-center;
+        margin-top: 115px;
+        box-shadow: 0 0 2px $brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include tablet{
+            width: 420px;
+            height: 420px;
+            margin-top: 70px;
+        }
+        @include mobile{
+            margin-top: 30px;
+            width: 280px;
+            height: 280px;
+        }
+    }
+    &__pic{
+        background: $black;
+        border-radius: 50%;
+        width: 520px;
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        @include tablet{
+            width: 345px;
+            height: 345px;
+        }
+        @include mobile{
+            width: 230px;
+            height: 230px;
+        }
+    }
+    &__list{
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 300px;
+            left: 13px;
+            width: 100%;
+            height: 200px;
+        }
+    }
+    &__item{
+        color: $white;
+        font-weight: 300;
+        position: absolute;
+        width: 250px;
+        @include tablet{
+            width: 150px;
+            font-size: 14px;
+        }
+        @include mobile{
+            width: 85%;
+            position: static;
+            text-align: left !important;
+        }
+        &::before{
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: $brown;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            @include tablet{
+                width: 10px;
+                height: 10px;
+            }
+            @include mobile{
+                top: auto;
+                transform: translateY(0);
+                left: -18px !important;
+            }
+        }
+        &_1, &_2{
+            &::before{
+                right: -25px;
+            }
+            text-align: right;
+        }
+        &_1{
+            top: 24%;
+            right: 97.5%;
+            @include tablet{
+                top: 22.5%;
+                right: 100%;
+            }
+        }
+        &_2{
+            top: 65%;
+            right: 99.5%;
+            @include tablet{
+                top: 64%;
+                right: 101%;
+            }
+        }
+        &_3, &_4{
+            &::before{
+                left: -25px;
+            }
+            text-align: left;
+        }
+        &_3{
+            top: 35%;
+            right: -41%;
+            @include tablet{
+                top: 34%;
+                right: -39%;
+            }
+        }
+        &_4{
+            top: 70%;
+            right: -37%;
+            @include tablet{
+                top: 70%;
+                right: -33.5%;
+            }
+        }
+    }
+}

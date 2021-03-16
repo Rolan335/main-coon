@@ -1,0 +1,31 @@
+html{
+    font-size: 16px;
+    font-family: $text-font;
+    color: #fff;
+    @include mobile{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+//container
+.container{
+    overflow: hidden;
+    width: 1120px;
+    padding: 0 15px;
+    margin: $mr-center;
+}
+
+@include tablet{
+    .container{
+        width: 750px;
+        margin: $mr-center;
+    }
+}
+
+@include mobile{
+    .container{
+        width: 320px;
+        margin: $mr-center;
+    }
+}

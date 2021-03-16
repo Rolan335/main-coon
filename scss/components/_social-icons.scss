@@ -1,0 +1,21 @@
+.social{
+    width: 70px;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__link{
+        width: 16px;
+        height: 12px;
+    }
+    &__icon{
+        transition: $standart-transition;
+        width: inherit;
+        height: inherit;
+        fill: $white;
+        &:hover{
+            fill: $brown;
+        }
+    }
+}

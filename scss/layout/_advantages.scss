@@ -1,0 +1,79 @@
+.advantages{
+    background-color: $black-dark;
+    padding-top: 70px;
+    height: 620px;
+    @include tablet{
+        height: 1170px;
+    }
+    @include mobile{
+        height: 1070px;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__subtitle{
+        @extend %subtitle;
+        margin-top: 40px;
+    }
+    &__blocks-wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin: $mr-center;
+        margin-top: 50px;
+        @include tablet{
+            flex-direction: column;
+            width: 330px;
+            height: 900px;
+        }
+        @include mobile{
+            width: 100%;
+            height: 740px;
+            margin-top: 30px;
+        }
+    }
+    &__block{
+        width: 330px;
+        height: 280px;
+        background-color: $black-light;
+        border: 20px solid $black-light;
+        transition: $standart-transition;
+        &:hover{
+            background-color: $brown;
+            use{
+                fill: $white;
+            }
+        }
+        @include mobile{
+            width: 270px;
+            height: 230px;
+            border-width: 15px;
+        }
+    }
+    &__icon{
+        display: block;
+        width: 110px;
+        height: 110px;
+        margin: $mr-center;
+        margin-top: 30px;
+        @include mobile{
+            margin-top: 10px;
+        }
+        use{
+            fill: $brown;
+            width: inherit;
+            height: inherit;
+        }
+    }
+    &__text{
+        @extend %subtitle;
+        color: $white;
+        width: 255px;
+        margin: $mr-center;
+        margin-top: 35px;
+        @include mobile{
+            margin-top: 20px;
+        }
+    }
+}

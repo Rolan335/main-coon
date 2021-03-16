@@ -1,0 +1,88 @@
+.about{
+    padding-top: 85px;
+    height: 645px;
+    background: url("/img/about/about_bg-desktop.jpg") no-repeat center/cover;
+    @include tablet{
+        background-image: url("/img/about/about_bg-tablet.jpg");
+        padding-top: 60px;
+        height: 950px;
+    }
+    @include mobile{
+        height: 1000px;
+        background-image: url("/img/about/about_bg-mobile.jpg")
+    }
+    &__title{
+        @extend %title;
+    }
+    &__block-wrapper{
+        margin-top: 50px;
+        height: 370px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        @include tablet{
+            flex-direction: column;
+            align-content: center;
+            height: 750px;
+        }
+    }
+}
+.block-about{
+    border: $border;
+    width: 530px;
+    height: 165px;
+    position: relative;
+    transition: $standart-transition;
+    &:hover{
+        .block-about__btn{
+            background-color: transparent;
+        }
+    }
+    @include mobile{
+        width: 310px;
+        height: 170px;
+    }
+    &__title{
+        @extend %about-block-title;
+        margin: 35px 0 0 45px;
+        @include mobile{
+            margin: 20px 0 0 20px;
+        }
+    }
+    &__text{
+        width: 400px;
+        @extend %about-text;
+        margin: 10px 0 0 45px;
+        @include mobile{
+            width: 230px;
+            margin: 5px 0 0 20px;
+        }
+    }
+    &__btn{
+        transition: $standart-transition;
+        display: block;
+        width: 60px;
+        background-color: $brown;
+        position: absolute;
+        outline: $border;
+        top: 0px;
+        right: 0;
+        bottom: 0px;
+        @include mobile{
+            width: 45px;
+        }
+    }
+    &__icon{
+        display: block;
+        width: 12px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+
+    }
+}

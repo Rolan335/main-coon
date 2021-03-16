@@ -1,0 +1,56 @@
+%title{
+    font-family: $title-font;
+    font-size: 36px;
+    text-align: center;
+}
+
+%subtitle{
+    font-family: $text-font;
+    font-weight: 300;
+    line-height: 26px;
+    color: $brown;
+    text-align: center;
+    @include mobile{
+        font-size: 14px;
+        width: 100% !important;
+    }
+}
+
+%about-block-title{
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: left;
+    color: $brown;
+    @include mobile{
+        font-size: 18px;
+    }
+}
+
+%about-text{
+    font-weight: 300;
+    font-size: 14px;
+    color: $white;
+    text-align: left;
+    line-height: 23px;
+    @include mobile{
+        line-height: 20px;
+    }
+}
+
+%faq-number{
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 82px;
+    color: $brown;
+    @include tablet{
+        font-size: 50px;
+    }
+}
+
+%faq-btn{
+    font-size: 36px;
+    font-weight: 100;
+    color: $brown;
+}

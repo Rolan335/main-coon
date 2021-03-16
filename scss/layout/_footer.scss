@@ -1,0 +1,63 @@
+.footer{
+    height: 160px;
+    background-color: $black-dark;
+    padding-top: 68px;
+    @include mobile{
+        height: 200px;
+        padding-top: 40px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        @include mobile{
+            flex-direction: column-reverse;
+        }
+    }
+    &__icon{
+        width: 47px;
+        height: 21px;
+        @include tablet{
+            display: none;
+        }
+        @include mobile{
+            display: block;
+            margin-top: 25px;
+        }
+    }
+    &__social{
+        flex-direction: row-reverse;
+        margin-left: 125px;
+        @include tablet{
+            margin-left: 0;
+        }
+        @include mobile{
+            margin-top: 25px;
+        }
+    .social__icon{
+        fill: $brown;
+            &:hover{
+                fill: $white;
+            }
+    }
+    }
+    &__adress{
+        margin-left: 150px;
+        font-size: 14px;
+        @include mobile{
+        order: 1;
+        margin: 0;
+        }
+    }
+    &__tel{
+        margin-left: 70px;
+        color: #FDF2E6;
+        font-size: 14px;
+        transition: $standart-transition;
+        &:hover{
+            color: $brown;
+        }
+        @include mobile{
+            margin: 20px 0 0 0;
+        }
+    }
+}
